@@ -5,7 +5,7 @@ This repo outlines **a format for APIs, libraries and datasets containing and wo
 ![CC-licensed](https://img.shields.io/github/license/derhuerst/friendly-public-transport-format.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst/friendly-public-transport-format.svg)](https://gitter.im/derhuerst/friendly-public-transport-format)
 
-We ([@juliuste](https://github.com/juliuste) and [@derhuerst](https://github.com/derhuerst)) agreed to let their public transport modules use this as a base of interoperability. We are looking forwards to discuss & extend this format further!
+We ([@juliuste](https://github.com/juliuste) and [@derhuerst](https://github.com/derhuerst)) agreed to let our public transport modules use this as a base of interoperability. We are looking forwards to discuss & extend this format further!
 
 It tries to keep things simple:
 
