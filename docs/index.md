@@ -9,7 +9,7 @@
 	name: 'Berlin Hauptbahnhof', // official non-abbreviated name, required
 	// todo: other names
 	coordinates: {
-		longidute: 52.5250839,
+		longitude: 52.5250839,
 		latitude: 13.3672133
 	},
 	address: 'Europaplatz 1, 10557 Berlin', // can also be an object
@@ -27,7 +27,7 @@
 	name: 'Berlin Hauptbahnhof (tief)', // official non-abbreviated name, required
 	// todo: other names
 	coordinates: {
-		longidute: 52.5250839,
+		longitude: 52.5250839,
 		latitude: 13.3672133
 	}
 }
