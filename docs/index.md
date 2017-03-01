@@ -1,6 +1,39 @@
 # friendly public transport format
 
-## station
+## references
+
+In order to be able to use this format in both static data *and* API responses, you may chose wether to reference an item by its `id` or inline the item as an object. Take this stop as an example:
+
+```js
+{
+	type: 'stop',
+	id: '1234',
+	name: 'Bus Terminal A',
+	station: '123' // this references a `station` object
+}
+```
+
+You may also inline the `station` if that's more convenient:
+
+```
+{
+	type: 'stop',
+	id: '1234',
+	name: 'Bus Terminal A',
+	station: { // inline `station` object
+		type: 'station',
+		id: '123',
+		name: 'Copenhagen Central Station',
+		station: '123' // this references a `station` object
+	}
+}
+```
+
+## item types
+
+### `station`
+
+A station is a larger building or area that can be identified by a name. It is usually represented by a single node on a public transport map. Whereas a `stop` usually specifies a location, a `station` often is a broader area that may span across multiple levels or buildings.
 
 ```js
 {
@@ -17,7 +50,11 @@
 }
 ```
 
-## stop
+### `stop`
+
+A stop is a single small point or structure at which vehicles stop. A stop always belongs to a station. It may for example be a sign, a basic shelter or a railway platform.
+
+If the underlying data source does not allow such a fine-grained distinction, use `station`s instead.
 
 ```js
 {
@@ -33,7 +70,7 @@
 }
 ```
 
-## line
+### `line`
 
 ```js
 {
@@ -45,7 +82,7 @@
 }
 ```
 
-## route
+### `route`
 
 ```js
 {
