@@ -2,8 +2,8 @@
 
 This repo outlines **a format for APIs, libraries and datasets containing and working with public transport data.**
 
-![CC-licensed](https://img.shields.io/github/license/derhuerst/friendly-public-transport-format.svg)
-[![chat on gitter](https://badges.gitter.im/derhuerst/friendly-public-transport-format.svg)](https://gitter.im/derhuerst/friendly-public-transport-format)
+![CC-licensed](https://img.shields.io/github/license/public-transport/friendly-public-transport-format.svg)
+[![chat on gitter](https://badges.gitter.im/public-transport/friendly-public-transport-format.svg)](https://gitter.im/public-transport/friendly-public-transport-format)
 
 We ([@juliuste](https://github.com/juliuste) and [@derhuerst](https://github.com/derhuerst)) agreed to let our public transport modules use this as a base of interoperability. We are looking forwards to discuss & extend this format further!
 
@@ -27,4 +27,4 @@ Things still missing:
 
 ## Contributing
 
-If you have a question or want to discuss this format, go to [the issues page](https://github.com/derhuerst/friendly-public-transport-format.svg/issues).
+If you have a question or want to discuss this format, go to [the issues page](https://github.com/public-transport/friendly-public-transport-format/issues).
