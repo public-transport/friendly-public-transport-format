@@ -41,12 +41,11 @@ A station is a larger building or area that can be identified by a name. It is u
 	id: '123456', // unique, url-safe, required
 	name: 'Berlin Hauptbahnhof', // official non-abbreviated name, required
 	// todo: other names
-	coordinates: {
-		longitude: 52.5250839,
-		latitude: 13.3672133
+	coordinates: { // optional
+		longitude: 52.5250839, // required
+		latitude: 13.3672133 // required
 	},
-	address: 'Europaplatz 1, 10557 Berlin', // can also be an object
-	stops: [] // array of stop ids or stop objects
+	address: 'Europaplatz 1, 10557 Berlin'
 }
 ```
 
@@ -63,9 +62,9 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	station: '123456', // station id or station object, required
 	name: 'Berlin Hauptbahnhof (tief)', // official non-abbreviated name, required
 	// todo: other names
-	coordinates: {
-		longitude: 52.5250839,
-		latitude: 13.3672133
+	coordinates: { // optional
+		longitude: 52.5250839, // required
+		latitude: 13.3672133 // required
 	}
 }
 ```
@@ -93,14 +92,41 @@ If the underlying data source does not allow such a fine-grained distinction, us
 }
 ```
 
-## trip
+### `trip`
 
-```
+This markup is optimized for urban public transport, with consistent intervals between two stations.
+
+```js
 {
 	type: 'trip', // required
 	id: '12345', // unique, url-safe, required
 	name: 'string', // title like "train to München Hauptbahnhof"
 	route: '1234' // route id or route object
-	// todo: time at stops, schedule
+	schedule: '12345', // schedule id or schedule object
+	sequence: [ // array of objects, required
+		{
+			time: 0, // time in seconds, required
+			stop: '12345678' // station/stop id or station/stop object, required
+		},
+		{time: 70, stop: '87654321'},
+		{time: 110, stop: '87651234'}
+	]
+}
+```
+
+### `schedule`
+
+```js
+{
+	type: 'trip', // required
+	id: '12345', // unique, url-safe, required
+	validFrom: '2016-03-01', // ISO 8601 date string, required
+	validUntil: '2017-03-01', // ISO 8601 date string, required
+	starts: [ // array of Unix timestamps, required
+		1488379661, // start time of the trip
+		1488379761,
+		1488379861,
+		1488379961
+	]
 }
 ```
