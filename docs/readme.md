@@ -87,29 +87,10 @@ If the underlying data source does not allow such a fine-grained distinction, us
 {
 	type: 'route', // required
 	id: '1234', // unique, url-safe, required
-	line: '123', // line id or line object, required
-	course: [], // array of station/stop ids or station/stop objects
-}
-```
-
-### `trip`
-
-This markup is optimized for urban public transport, with consistent intervals between two stations.
-
-```js
-{
-	type: 'trip', // required
-	id: '12345', // unique, url-safe, required
-	name: 'string', // title like "train to München Hauptbahnhof"
-	route: '1234' // route id or route object
-	schedule: '12345', // schedule id or schedule object
-	sequence: [ // array of objects, required
-		{
-			time: 0, // time in seconds, required
-			stop: '12345678' // station/stop id or station/stop object, required
-		},
-		{time: 70, stop: '87654321'},
-		{time: 110, stop: '87651234'}
+	line: '123', // line id or line object, required,
+	stops: [ // array of stop/station ids or objects, required
+		'12345678',
+		'87654321'
 	]
 }
 ```
@@ -118,10 +99,16 @@ This markup is optimized for urban public transport, with consistent intervals b
 
 ```js
 {
-	type: 'trip', // required
+	type: 'schedule', // required
 	id: '12345', // unique, url-safe, required
-	validFrom: '2016-03-01', // ISO 8601 date string, required
-	validUntil: '2017-03-01', // ISO 8601 date string, required
+	route: '1234', // route id or object, required
+	sequence: [ // relative to departure at first station/stop, in 1-to-1 relation to `route` stops
+		{
+			departure: 0, // required
+			arrival: 10
+		},
+		{departure: 120, arrival: 130}
+	],
 	starts: [ // array of Unix timestamps, required
 		1488379661, // start time of the trip
 		1488379761,
