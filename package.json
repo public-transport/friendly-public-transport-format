@@ -1,0 +1,20 @@
+{
+	"name": "friendly-public-transport-format",
+	"description": "A format for APIs, libraries and datasets containing and working with public transport data.",
+	"version": "0.0.0",
+	"keywords": [
+		"public transport",
+		"gtfs",
+		"format",
+		"standard"
+	],
+	"author": {"name": "Julius Tens", "email": "mail@juliustens.de>"},
+	"contributors": [
+		{"name": "Jannis R", "email": "mail@jannisr.de>"}
+	],
+	"homepage": "https://github.com/public-transport/friendly-public-transport-format",
+	"repository": "public-transport/friendly-public-transport-format",
+	"bugs": "https://github.com/public-transport/friendly-public-transport-format/issues",
+	"main": "docs/readme.md",
+	"license": "CC-BY-SA-4.0"
+}
