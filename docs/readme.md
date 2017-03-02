@@ -15,7 +15,7 @@ In order to be able to use this format in both static data *and* API responses, 
 
 You may also inline the `station` if that's more convenient:
 
-```
+```js
 {
 	type: 'stop',
 	id: '1234',
@@ -76,8 +76,10 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	type: 'line', // required
 	id: '123', // unique, url-safe, required
 	name: 'ICE 599', // official non-abbreviated name, required
+	mode: 'train', // see section on modes, required
 	// todo: color, ...
-	routes: [] // array of route ids or route objects
+	routes: [], // array of route ids or route objects
+	operator: '123456', // operator id or station object
 }
 ```
 
@@ -88,6 +90,7 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	type: 'route', // required
 	id: '1234', // unique, url-safe, required
 	line: '123', // line id or line object, required,
+	mode: 'bus', // see section on modes, overrides `line` mode, e.g. for replacements services
 	stops: [ // array of stop/station ids or objects, required
 		'12345678',
 		'87654321'
@@ -102,6 +105,7 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	type: 'schedule', // required
 	id: '12345', // unique, url-safe, required
 	route: '1234', // route id or object, required
+	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
 	sequence: [ // relative to departure at first station/stop, in 1-to-1 relation to `route` stops
 		{
 			departure: 0, // required
@@ -115,5 +119,41 @@ If the underlying data source does not allow such a fine-grained distinction, us
 		1488379861,
 		1488379961
 	]
+}
+```
+
+### `operator`
+
+```js
+{
+	type: 'operator', // required
+	id: 'sncf', // unique, url-safe, required
+	name: 'Société nationale des chemins de fer français' // official non-abbreviated name, required
+}
+```
+
+### `journey`
+
+```js
+{
+	type: 'journey', // required
+	id: '12345', // unique, url-safe, required
+	legs: [ // array of objects, required
+		{
+			origin: '12345678', // station/stop/location id or object, required
+			destination: '87654321', // station/stop/location id or object, required
+			departure: '2017-03-16T20:00:00+01:00', // ISO 8601 string (with origin timezone), required
+			arrival: '2017-03-17T15:00:00+02:00', // ISO 8601 string (with destination timezone), required
+			schedule: '1234', // schedule id or object
+			mode: 'walking', // see section on modes, overrides `schedule` mode
+			public: true, // publicly accessible?
+			operator: 'walking' // operator id or station object, overrides `schedule` mode
+		}
+		// …
+	],
+	price: { // optional
+		amount: 19.95, // number, required
+		currency: 'EUR' // ISO 4217 code, required
+	}
 }
 ```
