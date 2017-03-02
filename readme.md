@@ -20,7 +20,6 @@ Specifically, it trades
 
 Things still missing:
 
-- `journey`
 - concise definitions
 - clear naming & recommendations for optional data
 - a list of modules implementing this format
