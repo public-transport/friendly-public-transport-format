@@ -157,3 +157,10 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	}
 }
 ```
+
+## modes
+
+- `walking`
+- `train`
+- `bus`
+- `ferry`
