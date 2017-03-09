@@ -85,6 +85,10 @@ If the underlying data source does not allow such a fine-grained distinction, us
 
 ### `route`
 
+A route represents a single set of stations, of a single `line`.
+
+For a very consistent subway service, there may be one route for each direction. Planned detours, trains stopping early and additional directions would have their own route.
+
 ```js
 {
 	type: 'route', // required
@@ -108,10 +112,10 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
 	sequence: [ // relative to departure at first station/stop, in 1-to-1 relation to `route` stops
 		{
-			departure: 0, // required
-			arrival: 10
+			departure: 10, // required
+			arrival: 0
 		},
-		{departure: 120, arrival: 130}
+		{departure: 130, arrival: 120}
 	],
 	starts: [ // array of Unix timestamps, required
 		1488379661, // start time of the trip
@@ -133,6 +137,8 @@ If the underlying data source does not allow such a fine-grained distinction, us
 ```
 
 ### `journey`
+
+A `journey` is a computed set of directions to get from A to B at a specific time. It would typically be the result of a route planning algorithm.
 
 ```js
 {
@@ -160,7 +166,9 @@ If the underlying data source does not allow such a fine-grained distinction, us
 
 ## modes
 
+Work in progess, see [the tracking issue for adding new `mode`s](https://github.com/public-transport/friendly-public-transport-format/issues/4).
+
 - `walking`
-- `train`
+- `train` – high-speed, regional, commuter/urban & underground trains
 - `bus`
-- `ferry`
+- `ferry` – urban & long-distance water transport
