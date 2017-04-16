@@ -23,8 +23,7 @@ You may also inline the `station` if that's more convenient:
 	station: { // inline `station` object
 		type: 'station',
 		id: '123',
-		name: 'Copenhagen Central Station',
-		station: '123' // this references a `station` object
+		name: 'Copenhagen Central Station'
 	}
 }
 ```
@@ -157,7 +156,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			schedule: '1234', // schedule id or object
 			mode: 'walking', // see section on modes, overrides `schedule` mode
 			public: true, // publicly accessible?
-			operator: 'walking' // operator id or station object, overrides `schedule` mode
+			operator: 'sncf' // operator id or station object, overrides `schedule` mode
 		}
 		// …
 	],
