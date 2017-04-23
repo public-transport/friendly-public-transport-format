@@ -4,6 +4,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
 - [`locomore`](https://github.com/derhuerst/locomore) – A JavaScript client for the Locomore API.
+- [`nettbuss-stations`](https://github.com/derhuerst/nettbuss-stations) – A list of Nettbuss.se stations.
 - [`tallink`](https://github.com/derhuerst/tallink) – JavaScript client for the tallink API.
 - [`vbb-find-stations`](https://github.com/derhuerst/vbb-find-stations) – Search for stations of VBB.
 - [`vbb-lines`](https://github.com/derhuerst/vbb-lines) – VBB lines and their stations.
