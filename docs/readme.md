@@ -103,6 +103,8 @@ For a very consistent subway service, there may be one route for each direction.
 
 ### `schedule`
 
+*Note:* There are many ways to format schedules of public transport routes. This one tries to balance the amount of data and consumability. It is specifically geared towards urban public transport, with frequent trains and homogenous travels.
+
 ```js
 {
 	type: 'schedule', // required
@@ -152,7 +154,9 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			origin: '12345678', // station/stop/location id or object, required
 			destination: '87654321', // station/stop/location id or object, required
 			departure: '2017-03-16T20:00:00+01:00', // ISO 8601 string (with origin timezone), required
+			departurePlatform: '4-1', // string
 			arrival: '2017-03-17T15:00:00+02:00', // ISO 8601 string (with destination timezone), required
+			departurePlatform: '9', // string
 			schedule: '1234', // schedule id or object
 			mode: 'walking', // see section on modes, overrides `schedule` mode
 			public: true, // publicly accessible?
