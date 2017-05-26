@@ -15,8 +15,8 @@ It tries to keep things simple:
 
 Specifically, it trades
 
-- consumability for efficiency: GTFS sets feel like database dumps.
-- simplicity for completeness: Only basic attributes are required, most is optional.
+- efficiency for consumability: GTFS sets feel like database dumps.
+- completeness for simplicity: Only basic attributes are required, most is optional.
 
 Things still missing:
 
