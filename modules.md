@@ -15,6 +15,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`hafas-client`](https://github.com/derhuerst/hafas-client) – JavaScript client for HAFAS mobile APIs.
 - [`interrail`](https://github.com/juliuste/interrail) – Find european train stations and routes. Client for the European Interrail / EuRail API.
 - [`locomore`](https://github.com/derhuerst/locomore) – A JavaScript client for the Locomore API.
+- [`meinfernbus`](https://github.com/juliuste/meinfernbus) – JavaScript client for the Meinfernbus/FlixBus API.
 - [`nettbuss-stations`](https://github.com/derhuerst/nettbuss-stations) – A list of Nettbuss.se stations.
 - [`ouibus`](https://github.com/juliuste/ouibus) – JavaScript client for the OUIBUS API.
 - [`search-meinfernbus-locations`](https://github.com/derhuerst/search-meinfernbus-locations) – Search for Flixbus MeinFernbus cities & stations.
