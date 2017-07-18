@@ -10,6 +10,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`db-zugradar-client`](https://github.com/derhuerst/db-zugradar-client) – Get live departures of DB trains.
 - [`deinbus`](https://github.com/juliuste/deinbus) – JavaScript client for the *deinbus* coach travel API.
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
+- [`eurolines-de`](https://github.com/juliuste/eurolines-de) – JavaScript client for the eurolines.de API.
 - [`generate-db-shop-urls`](https://github.com/derhuerst/generate-db-shop-urls) – Magically generate Deutsche Bahn ticket URLs.
 - [`generate-vbb-gtfs`](https://github.com/derhuerst/generate-vbb-gtfs) – Generate clean GTFS from VBB data.
 - [`hafas-client`](https://github.com/derhuerst/hafas-client) – JavaScript client for HAFAS mobile APIs.
