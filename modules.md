@@ -2,6 +2,8 @@
 
 This is a list of JavaScript modules adhering to the [*Friendly Public Transport Format*](https://github.com/public-transport/friendly-public-transport-format).
 
+## exposing or containing FPTF data
+
 - [`db-hafas`](https://github.com/derhuerst/db-hafas) – JavaScript client for the DB HAFAS API.
 - [`db-prices`](https://github.com/juliuste/db-prices) – Find the cheapest routes using the DB Sparpreise API.
 - [`db-stations`](https://github.com/derhuerst/db-stations) – A list of DB stations.
@@ -9,10 +11,10 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`db-monitor-cli`](https://github.com/derhuerst/db-monitor-cli) – Command line tool to fetch departures at DB stations.
 - [`db-zugradar-client`](https://github.com/derhuerst/db-zugradar-client) – Get live departures of DB trains.
 - [`deinbus`](https://github.com/juliuste/deinbus) – JavaScript client for the *deinbus* coach travel API.
+- [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations) – Build a graph of DB stations by querying departures.
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
 - [`eurolines-de`](https://github.com/juliuste/eurolines-de) – JavaScript client for the eurolines.de API.
-- [`generate-db-shop-urls`](https://github.com/derhuerst/generate-db-shop-urls) – Magically generate Deutsche Bahn ticket URLs.
-- [`generate-vbb-gtfs`](https://github.com/derhuerst/generate-vbb-gtfs) – Generate clean GTFS from VBB data.
+- [`generate-db-graph`](https://github.com/derhuerst/generate-db-graph) – Generate a JSON graph of Deutsch Bahn public transport.
 - [`hafas-client`](https://github.com/derhuerst/hafas-client) – JavaScript client for HAFAS mobile APIs.
 - [`interrail`](https://github.com/juliuste/interrail) – Find european train stations and routes. Client for the European Interrail / EuRail API.
 - [`locomore`](https://github.com/derhuerst/locomore) – A JavaScript client for the Locomore API.
@@ -26,7 +28,6 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`vbb-fare-zones`](https://github.com/derhuerst/vbb-fare-zones) – All VBB stations and their fare zones.
 - [`vbb-find-stations`](https://github.com/derhuerst/vbb-find-stations) – Search for stations of VBB.
 - [`vbb-hafas`](https://github.com/derhuerst/vbb-hafas) – A JavaScript client for Berlin & Brandenburg public transport HAFAS API.
-- [`vbb-journey-ui`](https://github.com/derhuerst/vbb-journey-ui) – UI component for displaying a journey like in Google Maps.
 - [`vbb-lines`](https://github.com/derhuerst/vbb-lines) – VBB lines and their stations.
 - [`vbb-lines-at`](https://github.com/derhuerst/vbb-lines-at) – Which lines run at a VBB station?
 - [`vbb-monitor`](https://github.com/derhuerst/vbb-monitor) – Fetch all departures of all lines at all stations of VBB.
@@ -35,3 +36,9 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`vbb-stations`](https://github.com/derhuerst/vbb-stations) – A list of VBB stations.
 - [`vbb-stations-autocomplete`](https://github.com/derhuerst/vbb-stations-autocomplete) – Search for stations of VBB.
 - [`vbb-trips`](https://github.com/derhuerst/vbb-trips) – When do trains run where in VBB?
+
+## consuming FPTF data
+
+- [`generate-db-shop-urls`](https://github.com/derhuerst/generate-db-shop-urls) – Magically generate Deutsche Bahn ticket URLs.
+- [`generate-vbb-gtfs`](https://github.com/derhuerst/generate-vbb-gtfs) – Generate clean GTFS from VBB data.
+- [`vbb-journey-ui`](https://github.com/derhuerst/vbb-journey-ui) – UI component for displaying a journey like in Google Maps.
