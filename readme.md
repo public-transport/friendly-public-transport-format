@@ -3,7 +3,7 @@
 This repo outlines **a format for APIs, libraries and datasets containing and working with public transport data.** See [the spec](docs/readme.md) and the [list of JS modules](modules.md).
 
 ![CC-licensed](https://img.shields.io/github/license/public-transport/friendly-public-transport-format.svg)
-[![chat on gitter](https://badges.gitter.im/public-transport/friendly-public-transport-format.svg)](https://gitter.im/public-transport/friendly-public-transport-format)
+[![chat on gitter](https://badges.gitter.im/public-transport/Lobby.svg)](https://gitter.im/public-transport/Lobby)
 
 We ([@juliuste](https://github.com/juliuste) and [@derhuerst](https://github.com/derhuerst)) agreed to let our public transport modules use this as a base of interoperability. We are looking forward to discuss & extend this format further!
 
