@@ -36,6 +36,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`vbb-stations`](https://github.com/derhuerst/vbb-stations) – A list of VBB stations.
 - [`vbb-stations-autocomplete`](https://github.com/derhuerst/vbb-stations-autocomplete) – Search for stations of VBB.
 - [`vbb-trips`](https://github.com/derhuerst/vbb-trips) – When do trains run where in VBB?
+- [`wifi-on-ice-portal-client`](https://github.com/derhuerst/wifi-on-ice-portal-client) – Query information from the WifiOnICE portal in German ICE trains.
 
 ## consuming FPTF data
 

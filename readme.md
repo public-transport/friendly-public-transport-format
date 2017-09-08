@@ -11,7 +11,7 @@ It tries to keep things simple:
 
 - JSON and [ndjson](http://ndjson.org) only
 - a flat, intuitive representation of public transport timetables & infrastructure
-- conceptually inspired by the quasi-standard [GTFS](https://developers.google.com/transit/gtfs/)
+- conceptually inspired by the de-facto standard [GTFS](https://developers.google.com/transit/gtfs/)
 
 Specifically, it trades
 
