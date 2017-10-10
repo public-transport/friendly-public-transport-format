@@ -45,7 +45,7 @@ A station is a larger building or area that can be identified by a name. It is u
 		latitude: 13.3672133 // required
 	},
 	address: 'Europaplatz 1, 10557 Berlin',
-	regions: ['1234', '2345'] // region ids or region objects, see the section on 'region's
+	regions: ['1234', '2345'] // region ids or region objects, see the section on 'region's, optional
 }
 ```
 
@@ -71,7 +71,11 @@ If the underlying data source does not allow such a fine-grained distinction, us
 
 ### `region`
 
-A region is a group of `station`s, for example a metropolitan area or a geographical or cultural region. A `station` can be part of multiple regions.
+A `region` is a group of `station`s, for example a metropolitan area or a geographical or cultural region.
+
+In many urban areas, there are several long-distance train & bus stations, all distinct but well-connected through local public transport. It makes sense to keep them as `station`s, because they may still have individual `stop`s, but clustering them enables more advanced routing information.
+
+A `station` can be part of multiple `region`s.
 
 ```js
 {
