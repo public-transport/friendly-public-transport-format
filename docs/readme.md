@@ -44,7 +44,8 @@ A station is a larger building or area that can be identified by a name. It is u
 		longitude: 52.5250839, // required
 		latitude: 13.3672133 // required
 	},
-	address: 'Europaplatz 1, 10557 Berlin'
+	address: 'Europaplatz 1, 10557 Berlin',
+	regions: ['1234', '2345'] // region ids or region objects, see the section on 'region's
 }
 ```
 
@@ -65,6 +66,20 @@ If the underlying data source does not allow such a fine-grained distinction, us
 		longitude: 52.5250839, // required
 		latitude: 13.3672133 // required
 	}
+}
+```
+
+### `region`
+
+A region is a group of `station`s, for example a metropolitan area or a geographical or cultural region. A `station` can be part of multiple regions.
+
+```js
+{
+	type: 'region', // required
+	id: '1234', // unique, url-safe, required
+	name: 'Bretagne', // official non-abbreviated name, required
+	// todo: other names
+	stations: ['123456', '234567'] // station ids or station objects, required
 }
 ```
 
