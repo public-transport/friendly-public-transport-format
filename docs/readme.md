@@ -134,15 +134,21 @@ For a very consistent subway service, there may be one route for each direction.
 	id: '12345', // unique, url-safe, required
 	route: '1234', // route id or object, required
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
-	sequence: [ // relative to departure at first station/stop, in 1-to-1 relation to `route` stops
-		// Note that the departure for the first stop must be 0.
+	sequence: [
+		// relative to departure at first station/stop
+		// in 1-to-1 relation to `route` stops
 		{
-			departure: 0, // required
-			arrival: 0
+			arrival: -30 // optional, when the vehicle enters the route
+			// The departure at the first stop must be 0.
+			departure: 0 // required
 		},
 		{
-			departure: 130,
-			arrival: 120
+			arrival: 50, // optional
+			departure: 70 // required
+		}
+		{
+			arrival: 120, // The arrival at the last stop is required.
+			departure: 150 // optional, when the vehicle leaves the route
 		}
 	],
 	starts: [ // array of Unix timestamps, required
