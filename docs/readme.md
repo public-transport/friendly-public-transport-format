@@ -135,7 +135,7 @@ For a very consistent subway service, there may be one route for each direction.
 	route: '1234', // route id or object, required
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
 	sequence: [
-		// relative to departure at first station/stop
+		// seconds relative to departure at first station/stop
 		// in 1-to-1 relation to `route` stops
 		{
 			arrival: -30 // optional, when the vehicle enters the route
