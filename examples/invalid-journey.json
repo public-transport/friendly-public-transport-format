@@ -1,0 +1,90 @@
+{
+	"type": "journey",
+	"id": "12345",
+	"legs": [{
+		"origin": {
+			"type": "station",
+			"id": "10001",
+			"name": "Foo Station",
+			"coordinates": {
+				"longitude": -20,
+				"latitude": "30"
+			}
+		},
+		"destination": {
+			"type": "station",
+			"id": null,
+			"name": "Baz Main Station",
+			"coordinates": {
+				"longitude": 20,
+				"latitude": -30,
+				"altitude": 1400
+			}
+		},
+		"departure": 1489690800000,
+		"departurePlatform": "4-1",
+		"arrival": "2017-03-17T15:00:00+02:00",
+		"arrivalPlatform": "9",
+		"schedule": {
+			"type": "schedule",
+			"id": "1234",
+			"route": {
+				"type": "route",
+				"id": "123",
+				"line": {
+					"type": "line",
+					"id": "12",
+					"name": "Magic Interplanetary Express",
+					"mode": "ufo",
+					"operator": {
+						"type": "operator",
+						"id": "1",
+						"name": ""
+					}
+				},
+				"stops": [
+					"10001",
+					{
+						"type": "stop",
+						"id": "10002-a",
+						"station": {
+							"type": "station",
+							"id": "10002",
+							"name": "Bar City Center"
+						},
+						"name": "train station"
+					},
+					"10003"
+				]
+			},
+			"mode": "train",
+			"sequence": [
+				{
+					"departure": 0
+				},
+				{
+					"arrival": 3720,
+					"departure": 3600
+				},
+				{
+					"arrival": 64800
+				}
+			],
+			"starts": [
+				1489604400,
+				1489690800,
+				1489777200
+			]
+		},
+		"public": true,
+		"operator": {
+			"type": "operator",
+			"id": "2",
+			"name": "2 Replacement Railway Services Inc."
+		}
+	}],
+	"price": {
+		"amount": 19.95,
+		"currency": "EUR"
+	}
+}
