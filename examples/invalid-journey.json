@@ -23,8 +23,10 @@
 		},
 		"departure": 1489690800000,
 		"departurePlatform": "4-1",
+		"departureDelay": 10,
 		"arrival": "2017-03-17T15:00:00+02:00",
 		"arrivalPlatform": "9",
+		"arrivalDelay": "10s",
 		"schedule": {
 			"type": "schedule",
 			"id": "1234",
