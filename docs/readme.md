@@ -187,7 +187,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			departurePlatform: '4-1', // string
 			arrival: '2017-03-17T15:00:00+02:00', // ISO 8601 string (with destination timezone), required
 			arrivalDelay: -45, // seconds relative to arrival, optional
-			departurePlatform: '9', // string
+			arrivalPlatform: '9', // string
 			schedule: '1234', // schedule id or object
 			mode: 'walking', // see section on modes, overrides `schedule` mode
 			public: true, // publicly accessible?
