@@ -5,8 +5,6 @@ This repo outlines **a format for APIs, libraries and datasets containing and wo
 ![CC-licensed](https://img.shields.io/github/license/public-transport/friendly-public-transport-format.svg)
 [![chat on gitter](https://badges.gitter.im/public-transport/Lobby.svg)](https://gitter.im/public-transport/Lobby)
 
-We ([@juliuste](https://github.com/juliuste) and [@derhuerst](https://github.com/derhuerst)) agreed to let our public transport modules use this as a base of interoperability. We are looking forward to discuss & extend this format further!
-
 It tries to keep things simple:
 
 - JSON and [ndjson](http://ndjson.org) only
@@ -16,7 +14,7 @@ It tries to keep things simple:
 Specifically, it trades
 
 - efficiency for consumability: GTFS sets feel like database dumps.
-- completeness for simplicity: Only basic attributes are required, most is optional.
+- completeness for ease-of-use: Only basic attributes are required, most is optional.
 
 Things still missing:
 
@@ -26,4 +24,4 @@ Things still missing:
 
 ## Contributing
 
-If you have a question or want to discuss this format, go to [the issues page](https://github.com/public-transport/friendly-public-transport-format/issues).
+We are looking forward to discuss & extend this format further! If you have a question or want to propose changes, go to [the issues page](https://github.com/public-transport/friendly-public-transport-format/issues). Keep our [contributing guidelines in mind](contributing.md).
