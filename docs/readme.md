@@ -101,7 +101,7 @@ A `station` can be part of multiple `region`s.
 	mode: 'train', // see section on modes, required
 	// todo: color, ...
 	routes: [], // array of route ids or route objects
-	operator: '123456', // operator id or station object
+	operator: '123456', // operator id or operator object
 }
 ```
 
@@ -191,7 +191,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			schedule: '1234', // schedule id or object
 			mode: 'walking', // see section on modes, overrides `schedule` mode
 			public: true, // publicly accessible?
-			operator: 'sncf' // operator id or station object, overrides `schedule` mode
+			operator: 'sncf' // operator id or operator object, overrides `schedule` mode
 		}
 		// …
 	],
