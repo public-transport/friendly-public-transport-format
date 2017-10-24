@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+package fptf;
+
+enum Mode {
+    WALKING = 0;
+    TRAIN = 1;
+    BUS = 2;
+    FERRY = 3;
+}
+
+message Coordinates {
+    required float longitude = 1;
+    required float latitude = 2;
+}
+
+message Station {
+    required string id = 1;
+    required string name = 2;
+    optional Coordinates coordinates = 3;
+    optional string address = 4;
+    repeated string regions = 5; // todo: reference region objects
+}
+
+message Stop {
+    required string id = 1;
+    required string name = 2;
+    optional Coordinates coordinates = 3;
+    required string station = 4;  // todo: reference station object
+}
+
+message Region {
+    required string id = 1;
+    required string name = 2;
+    repeated string stations = 3;  // todo: reference station objects
+}
+
+message Line {
+    required string id = 1;
+    required string name = 2;
+    required Mode mode = 3;
+    repeated string routes = 4; // todo: reference routes objects, required or optional?
+    optional string operator = 5; // todo: required or optional?
+}
+
+message Route {
+    required string id = 1;
+    required string line = 2;  // todo: reference line object
+    optional Mode mode = 3; // todo: required or optional
+    repeated string stops = 4; // todo: required
+}
+
+message Schedule {
+    message SequenceElement {
+        optional int32 arrival = 1; // sometimes actually required
+        optional int32 departure = 2;  // sometimes actually required
+    }
+
+    required string id = 1;
+    required string route = 2;  // todo: reference route object
+    optional Mode mode = 3; // todo: required or optional
+    repeated SequenceElement sequence = 4;
+    repeated int32 starts = 5;
+}
+
+message Operator {
+    required string id = 1;
+    required string name = 2;
+}
+
+message Journey {
+    message Leg {
+        required string origin = 1;
+        required string destination = 2;
+        required string departure = 3;
+        optional int32 departureDelay = 4;
+        optional string departurePlatform = 5;
+        required string arrival = 6;
+        optional int32 arrivalDelay = 7;
+        optional string arrivalPlatform = 8;
+        required string schedule = 9; // todo: reference schedule object
+        optional Mode mode = 10; // todo: required or optional?
+        optional bool public = 11; // todo: required or optional?
+        optional string operator = 12; // todo: required or optional?
+    }
+    message Price {
+        required float amount = 1;
+        required string currency = 2;
+    }
+
+    required string id = 1;
+    repeated Leg legs = 2;
+    required Price price = 3; // todo: required
+}
