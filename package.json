@@ -10,7 +10,7 @@
 	],
 	"author": {"name": "Julius Tens", "email": "mail@juliustens.de>"},
 	"contributors": [
-		{"name": "Jannis R", "email": "mail@jannisr.de>"}
+		{"name": "Jannis R", "email": "mail@jannisr.de>"},
 		{"name": "Kilian Koeltzsch", "email": "me@kilian.io"}
 	],
 	"homepage": "https://github.com/public-transport/friendly-public-transport-format",
