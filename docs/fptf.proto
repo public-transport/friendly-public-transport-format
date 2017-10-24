@@ -51,7 +51,7 @@ message Route {
 }
 
 message Schedule {
-    message Element {
+    message SequenceElement {
         optional int32 arrival = 1; // sometimes actually required
         optional int32 departure = 2;  // sometimes actually required
     }
@@ -59,7 +59,7 @@ message Schedule {
     required string id = 1;
     required string route = 2;  // todo: reference route object
     optional Mode mode = 3; // todo: required or optional
-    repeated Element sequence = 4;
+    repeated SequenceElement sequence = 4;
     repeated int32 starts = 5;
 }
 
