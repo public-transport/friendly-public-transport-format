@@ -19,33 +19,33 @@ message Station {
     required string name = 2;
     optional Coordinates coordinates = 3;
     optional string address = 4;
-    repeated string regions = 5;
+    repeated string regions = 5; // todo: reference region objects
 }
 
 message Stop {
     required string id = 1;
     required string name = 2;
     optional Coordinates coordinates = 3;
-    required string station = 4;
+    required string station = 4;  // todo: reference station object
 }
 
 message Region {
     required string id = 1;
     required string name = 2;
-    repeated string stations = 3;
+    repeated string stations = 3;  // todo: reference station objects
 }
 
 message Line {
     required string id = 1;
     required string name = 2;
     required Mode mode = 3;
-    repeated string routes = 4; // todo: required or optional?
+    repeated string routes = 4; // todo: reference routes objects, required or optional?
     optional string operator = 5; // todo: required or optional?
 }
 
 message Route {
     required string id = 1;
-    required string line = 2;
+    required string line = 2;  // todo: reference line object
     optional Mode mode = 3; // todo: required or optional
     repeated string stops = 4; // todo: required
 }
@@ -57,7 +57,7 @@ message Schedule {
     }
 
     required string id = 1;
-    required string route = 2;
+    required string route = 2;  // todo: reference route object
     optional Mode mode = 3; // todo: required or optional
     repeated SequencePart sequence = 4;
     repeated int32 starts = 5;
@@ -78,7 +78,7 @@ message Journey {
         required string arrival = 6;
         optional int32 arrivalDelay = 7;
         optional string arrivalPlatform = 8;
-        required string schedule = 9;
+        required string schedule = 9; // todo: reference schedule object
         optional Mode mode = 10; // todo: required or optional?
         optional bool public = 11; // todo: required or optional?
         optional string operator = 12; // todo: required or optional?
