@@ -52,8 +52,8 @@ message Route {
 
 message Schedule {
     message SequencePart {
-        optional int32 arrival = 1 // sometimes actually required
-        optional int32 departure = 2  // sometimes actually required
+        optional int32 arrival = 1; // sometimes actually required
+        optional int32 departure = 2;  // sometimes actually required
     }
 
     required string id = 1;
