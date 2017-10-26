@@ -16,6 +16,6 @@
 	"homepage": "https://github.com/public-transport/friendly-public-transport-format",
 	"repository": "public-transport/friendly-public-transport-format",
 	"bugs": "https://github.com/public-transport/friendly-public-transport-format/issues",
-	"main": "docs/readme.md",
+	"main": "spec/readme.md",
 	"license": "CC-BY-SA-4.0"
 }
