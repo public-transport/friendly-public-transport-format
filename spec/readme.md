@@ -58,11 +58,9 @@ A station is a larger building or area that can be identified by a name. It is u
 	id: '123456', // unique, url-safe, required
 	name: 'Berlin Hauptbahnhof', // official non-abbreviated name, required
 	// todo: other names
-	coordinates: { // optional
-		longitude: 52.5250839, // required
-		latitude: 13.3672133 // required
+	location: { // location object, optional
+		// … see above
 	},
-	address: 'Europaplatz 1, 10557 Berlin', // optional
 	regions: [ // region ids or region objects, see the section on 'region's, optional
 		'1234', '2345'
 	]
@@ -82,9 +80,8 @@ If the underlying data source does not allow such a fine-grained distinction, us
 	station: '123456', // station id or station object, required
 	name: 'Berlin Hauptbahnhof (tief)', // official non-abbreviated name, required
 	// todo: other names
-	coordinates: { // optional
-		longitude: 52.5250839, // required
-		latitude: 13.3672133 // required
+	location: { // location object, optional
+		// … see above
 	}
 }
 ```
