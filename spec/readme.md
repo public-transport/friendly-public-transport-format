@@ -28,6 +28,24 @@ You may also inline the `station` if that's more convenient:
 }
 ```
 
+## `location` objects
+
+A `location` object is used by other items to indicate their locations.
+
+```js
+{
+	type: 'location', // required
+	name: 'Reichstagsgebäude', // optional
+	address: 'Platz der Republik 1, 11011 Berlin', // optional
+
+	longitude: 13.4, // optional
+	latitude: 52.5, // optional
+	altitude: 1300 // optional
+}
+```
+
+If the `latitude` field is specified in a `location` object, the `longitude` field must also be specified, and vice-versa.
+
 ## item types
 
 ### `station`
