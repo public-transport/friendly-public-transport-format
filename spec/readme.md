@@ -225,9 +225,18 @@ The `departureDelay` and `arrivalDelay` fields should only contain a value if re
 
 ## modes
 
-Work in progess, see [the tracking issue for adding new `mode`s](https://github.com/public-transport/friendly-public-transport-format/issues/4).
+As discussed in [#4](https://github.com/public-transport/friendly-public-transport-format/issues/4), we decided to have two fields `mode` and `subMode`.
 
-- `walking`
-- `train` – high-speed, regional, commuter/urban & underground trains
+The following list shows all possible values for a `mode` property. For consumers to be able to use `mode` meaningfully, we will keep this list very short.
+
+- `train`
 - `bus`
-- `ferry` – urban & long-distance water transport
+- `ferry`
+- `taxi`
+- `gondola`
+- `aircraft`
+- `car`
+- `bicycle`
+- `walking`
+
+In order to convey more details, we will add the `subMode` field in the future. It will differentiate means of transport in a more fine-grained way, in order to enable consumers to provide more context and a better service.
