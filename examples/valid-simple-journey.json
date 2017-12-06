@@ -1,0 +1,21 @@
+{
+	"type": "journey",
+	"id": "12345",
+	"legs": [{
+		"origin": "10001",
+		"destination": "10003",
+		"departure": "2017-03-16T20:00:00+01:00",
+		"departurePlatform": "4-1",
+		"departureDelay": null,
+		"arrival": "2017-03-17T15:00:00+02:00",
+		"arrivalPlatform": "9",
+		"arrivalDelay": 30,
+		"schedule": "1234",
+		"public": true,
+		"operator": "2"
+	}],
+	"price": {
+		"amount": 19.95,
+		"currency": "EUR"
+	}
+}
