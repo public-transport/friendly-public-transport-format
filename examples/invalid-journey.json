@@ -6,7 +6,8 @@
 			"type": "station",
 			"id": "10001",
 			"name": "Foo Station",
-			"coordinates": {
+			"location": {
+				"type": "location",
 				"longitude": -20,
 				"latitude": "30"
 			}
@@ -15,10 +16,15 @@
 			"type": "station",
 			"id": null,
 			"name": "Baz Main Station",
-			"coordinates": {
+			"location": {
+				"type": "loc",
 				"longitude": 20,
 				"latitude": -30,
 				"altitude": 1400
+			},
+			"coordinates": {
+				"longitude": 20,
+				"latitude": -30
 			}
 		},
 		"departure": 1489690800000,
