@@ -114,6 +114,7 @@ A `station` can be part of multiple `region`s.
 	id: '123', // unique, url-safe, required
 	name: 'ICE 599', // official non-abbreviated name, required
 	mode: 'train', // see section on modes, required
+	subMode: …, // reserved for future use
 	// todo: color, ...
 	routes: [], // array of route ids or route objects
 	operator: '123456', // operator id or operator object
@@ -132,6 +133,7 @@ For a very consistent subway service, there may be one route for each direction.
 	id: '1234', // unique, url-safe, required
 	line: '123', // line id or line object, required,
 	mode: 'bus', // see section on modes, overrides `line` mode, e.g. for replacements services
+	subMode: …, // reserved for future use
 	stops: [ // array of stop/station ids or objects, required
 		'12345678',
 		'87654321'
@@ -149,6 +151,7 @@ For a very consistent subway service, there may be one route for each direction.
 	id: '12345', // unique, url-safe, required
 	route: '1234', // route id or object, required
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
+	subMode: …, // reserved for future use
 	sequence: [
 		// seconds relative to departure at first station/stop
 		// in 1-to-1 relation to `route` stops
@@ -205,6 +208,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			arrivalPlatform: '9', // string
 			schedule: '1234', // schedule id or object
 			mode: 'walking', // see section on modes, overrides `schedule` mode
+			subMode: …, // reserved for future use
 			public: true, // publicly accessible?
 			operator: 'sncf' // operator id or operator object, overrides `schedule` mode
 		}
@@ -221,9 +225,18 @@ The `departureDelay` and `arrivalDelay` fields should only contain a value if re
 
 ## modes
 
-Work in progess, see [the tracking issue for adding new `mode`s](https://github.com/public-transport/friendly-public-transport-format/issues/4).
+As discussed in [#4](https://github.com/public-transport/friendly-public-transport-format/issues/4), we decided to have two fields `mode` and `subMode`.
 
-- `walking`
-- `train` – high-speed, regional, commuter/urban & underground trains
+The following list shows all possible values for a `mode` property. For consumers to be able to use `mode` meaningfully, we will keep this list very short.
+
+- `train`
 - `bus`
-- `ferry` – urban & long-distance water transport
+- `ferry`
+- `taxi`
+- `gondola`
+- `aircraft`
+- `car`
+- `bicycle`
+- `walking`
+
+In order to convey more details, we will add the `subMode` field in the future. It will differentiate means of transport in a more fine-grained way, in order to enable consumers to provide more context and a better service.
