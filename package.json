@@ -17,5 +17,10 @@
 	"repository": "public-transport/friendly-public-transport-format",
 	"bugs": "https://github.com/public-transport/friendly-public-transport-format/issues",
 	"main": "spec/readme.md",
+	"files": [
+		"spec",
+		"examples",
+		"modules.md"
+	],
 	"license": "CC-BY-SA-4.0"
 }
