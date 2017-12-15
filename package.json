@@ -1,7 +1,7 @@
 {
 	"name": "friendly-public-transport-format",
 	"description": "A format for APIs, libraries and datasets containing and working with public transport data.",
-	"version": "0.0.0",
+	"version": "1.0.1",
 	"keywords": [
 		"public transport",
 		"gtfs",
