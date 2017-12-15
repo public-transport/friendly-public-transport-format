@@ -231,7 +231,7 @@ The following list shows all possible values for a `mode` property. For consumer
 
 - `train`
 - `bus`
-- `ferry`
+- `watercraft`
 - `taxi`
 - `gondola`
 - `aircraft`
