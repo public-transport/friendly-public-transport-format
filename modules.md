@@ -2,6 +2,8 @@
 
 This is a list of JavaScript modules adhering to the [*Friendly Public Transport Format*](https://github.com/public-transport/friendly-public-transport-format).
 
+- [`validate-fptf`](https://github.com/public-transport/validate-fptf) – Validate *FPTF* data. Follows the spec.
+
 ## exposing or containing FPTF data
 
 - [`db-hafas`](https://github.com/derhuerst/db-hafas) – JavaScript client for the DB HAFAS API.
