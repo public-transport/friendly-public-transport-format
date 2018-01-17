@@ -9,11 +9,11 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`db-hafas`](https://github.com/derhuerst/db-hafas) – JavaScript client for the DB HAFAS API.
 - [`db-prices`](https://github.com/juliuste/db-prices) – Find the cheapest routes using the DB Sparpreise API.
 - [`db-stations`](https://github.com/derhuerst/db-stations) – A list of DB stations.
+- [`vbb-monitor`](https://github.com/derhuerst/vbb-monitor) – Fetch all departures of all lines at all stations of VBB.
 - [`db-monitor`](https://github.com/derhuerst/db-monitor) – Fetch departures at DB stations.
 - [`db-monitor-cli`](https://github.com/derhuerst/db-monitor-cli) – Command line tool to fetch departures at DB stations.
 - [`db-zugradar-client`](https://github.com/derhuerst/db-zugradar-client) – Get live departures of DB trains.
 - [`deinbus`](https://github.com/juliuste/deinbus) – JavaScript client for the *deinbus* coach travel API.
-- [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations) – Build a graph of DB stations by querying departures.
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
 - [`eurolines-de`](https://github.com/juliuste/eurolines-de) – JavaScript client for the eurolines.de API.
 - [`generate-db-graph`](https://github.com/derhuerst/generate-db-graph) – Generate a JSON graph of Deutsch Bahn public transport.
@@ -32,11 +32,13 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`vbb-hafas`](https://github.com/derhuerst/vbb-hafas) – A JavaScript client for Berlin & Brandenburg public transport HAFAS API.
 - [`vbb-lines`](https://github.com/derhuerst/vbb-lines) – VBB lines and their stations.
 - [`vbb-lines-at`](https://github.com/derhuerst/vbb-lines-at) – Which lines run at a VBB station?
-- [`vbb-monitor`](https://github.com/derhuerst/vbb-monitor) – Fetch all departures of all lines at all stations of VBB.
 - [`vbb-positions-stream`](https://github.com/derhuerst/vbb-positions-stream) – A realtime stream for positions of buses and trains.
+- [`hafas-rest-api`](https://github.com/derhuerst/hafas-rest-api) – Expose a HAFAS client via an HTTP REST API.
 - [`vbb-rest`](https://github.com/derhuerst/vbb-rest) – An HTTP REST server for Berlin & Brandenburg public transport.
+- [`db-rest`](https://github.com/derhuerst/db-rest) – A clean REST API wrapping around the Deutsche Bahn API.
 - [`vbb-stations`](https://github.com/derhuerst/vbb-stations) – A list of VBB stations.
 - [`vbb-stations-autocomplete`](https://github.com/derhuerst/vbb-stations-autocomplete) – Search for stations of VBB.
+- [`db-stations-autocomplete`](https://github.com/derhuerst/db-stations-autocomplete) – Search for stations of DB.
 - [`vbb-trips`](https://github.com/derhuerst/vbb-trips) – When do trains run where in VBB?
 - [`wifi-on-ice-portal-client`](https://github.com/derhuerst/wifi-on-ice-portal-client) – Query information from the WifiOnICE portal in German ICE trains.
 
@@ -45,3 +47,9 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`generate-db-shop-urls`](https://github.com/derhuerst/generate-db-shop-urls) – Magically generate Deutsche Bahn ticket URLs.
 - [`generate-vbb-gtfs`](https://github.com/derhuerst/generate-vbb-gtfs) – Generate clean GTFS from VBB data.
 - [`vbb-journey-ui`](https://github.com/derhuerst/vbb-journey-ui) – UI component for displaying a journey like in Google Maps.
+- [`hafas-discover-stations`](https://github.com/derhuerst/hafas-discover-stations) – Pass in a HAFAS client, discover stations by querying departures.
+- [`discover-vbb-stations`](https://github.com/derhuerst/discover-vbb-stations) – Build a graph of VBB stations by querying departures.
+- [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations) – Build a graph of DB stations by querying departures.
+- [`hafas-collect-departures-at`](https://github.com/derhuerst/hafas-collect-departures-at) – Utility to collect departures, using any HAFAS client.
+- [`hafas-departures-in-direction`](https://github.com/derhuerst/hafas-departures-in-direction) – Pass in a HAFAS client, get departures in a certain direction.
+- [`merge-vbb-stations`](https://github.com/derhuerst/merge-vbb-stations) – Heuristic to find VBB stations & stops that should be one.
