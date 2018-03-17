@@ -98,7 +98,7 @@
 				"latitude": -31
 			}
 		},
-		"cancelled": true,
+		"canceled": true,
 		"departure": null,
 		"formerScheduledDeparture": "2017-03-17T16:00:00+02:00",
 		"departurePlatform": "4-1",
