@@ -223,7 +223,17 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 
 The `departureDelay` and `arrivalDelay` fields should only contain a value if realtime data or a prognosis based on realtime data is actually available.
 
-If the *departure* of a `journey` leg has been cancelled, the `departure` and `departureDelay` fields should be `null`. The `formerScheduledDeparture` field should contain the ISO 8601 value of when the vehicle had previously been scheduled to depart, without delay. Analogously, if the *arrival* of a `journey` leg has been cancelled, the `arrival` and `arrivalDelay` fields should be `null`. The `formerScheduledArrival` field should contain when the vehicle had previously been scheduled to arrive, without delay.
+If the *departure* of a `journey` leg has been canceled:
+
+- A `canceled: true` flag should be added to the `journey` leg.
+- The `departure` and `departureDelay` fields should be `null`.
+- The `formerScheduledDeparture` field should contain the ISO 8601 value of when the vehicle had previously been scheduled to depart, without delay.
+
+Analogously, if the *arrival* of a `journey` leg has been canceled:
+
+- A `canceled: true` flag should be added to the `journey` leg.
+- The `arrival` and `arrivalDelay` fields should be `null`.
+- The `formerScheduledArrival` field should contain when the vehicle had previously been scheduled to arrive, without delay.
 
 ## modes
 
