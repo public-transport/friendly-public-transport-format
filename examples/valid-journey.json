@@ -86,6 +86,30 @@
 			"id": "2",
 			"name": "2 Replacement Railway Services Inc."
 		}
+	}, {
+		"origin": "10003",
+		"destination": {
+			"type": "station",
+			"id": "10004",
+			"name": "Qux City Center",
+			"location": {
+				"type": "location",
+				"longitude": 21,
+				"latitude": -31
+			}
+		},
+		"canceled": true,
+		"departure": null,
+		"formerScheduledDeparture": "2017-03-17T16:00:00+02:00",
+		"departurePlatform": "4-1",
+		"departureDelay": null,
+		"arrival": null,
+		"formerScheduledArrival": "2017-03-17T17:00:00+02:00",
+		"arrivalPlatform": "9",
+		"arrivalDelay": null,
+		"schedule": "4321",
+		"public": true,
+		"operator": "3"
 	}],
 	"price": {
 		"amount": 19.95,
