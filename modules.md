@@ -17,7 +17,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
 - [`eurolines-de`](https://github.com/juliuste/eurolines-de) – JavaScript client for the eurolines.de API.
 - [`generate-db-graph`](https://github.com/derhuerst/generate-db-graph) – Generate a JSON graph of Deutsch Bahn public transport.
-- [`hafas-client`](https://github.com/derhuerst/hafas-client) – JavaScript client for HAFAS mobile APIs.
+- [`hafas-client`](https://github.com/public-transport/hafas-client) – JavaScript client for HAFAS mobile APIs.
 - [`interrail`](https://github.com/juliuste/interrail) – Find european train stations and routes. Client for the European Interrail / EuRail API.
 - [`locomore`](https://github.com/derhuerst/locomore) – A JavaScript client for the Locomore API.
 - [`meinfernbus`](https://github.com/juliuste/meinfernbus) – JavaScript client for the Meinfernbus/FlixBus API.
