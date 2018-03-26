@@ -13,6 +13,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`db-monitor`](https://github.com/derhuerst/db-monitor) – Fetch departures at DB stations.
 - [`db-monitor-cli`](https://github.com/derhuerst/db-monitor-cli) – Command line tool to fetch departures at DB stations.
 - [`db-zugradar-client`](https://github.com/derhuerst/db-zugradar-client) – Get live departures of DB trains.
+- [`oebb-hafas`](https://github.com/juliuste/oebb-hafas) – JavaScript client for the ÖBB HAFAS API.
 - [`deinbus`](https://github.com/juliuste/deinbus) – JavaScript client for the *deinbus* coach travel API.
 - [`ecolines`](https://github.com/derhuerst/ecolines) – JavaScript client for the Ecolines API.
 - [`eurolines-de`](https://github.com/juliuste/eurolines-de) – JavaScript client for the eurolines.de API.
@@ -41,6 +42,11 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`db-stations-autocomplete`](https://github.com/derhuerst/db-stations-autocomplete) – Search for stations of DB.
 - [`vbb-trips`](https://github.com/derhuerst/vbb-trips) – When do trains run where in VBB?
 - [`wifi-on-ice-portal-client`](https://github.com/derhuerst/wifi-on-ice-portal-client) – Query information from the WifiOnICE portal in German ICE trains.
+- [`insa-hafas`](https://github.com/derhuerst/insa-hafas) – JavaScript client for the NASA/INSA HAFAS API.
+- [`nahsh-hafas`](https://github.com/juliuste/nahsh-hafas) – JavaScript client for the NAH.SH HAFAS API.
+- [`hafas-monitor-departures`](https://github.com/derhuerst/hafas-monitor-departures) – Fetch all departures of all lines at all stations of VBB.
+- [`hafas-monitor-departures-ws-server`](https://github.com/derhuerst/hafas-monitor-departures-ws-server) – A WebSocket server wrapping `hafas-monitor-departures`.
+- [`hafas-monitor-journeys`](https://github.com/derhuerst/hafas-monitor-journeys) – Use any HAFAS API to monitor journeys from A to B.
 
 ## consuming FPTF data
 
@@ -52,4 +58,6 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations) – Build a graph of DB stations by querying departures.
 - [`hafas-collect-departures-at`](https://github.com/derhuerst/hafas-collect-departures-at) – Utility to collect departures, using any HAFAS client.
 - [`hafas-departures-in-direction`](https://github.com/derhuerst/hafas-departures-in-direction) – Pass in a HAFAS client, get departures in a certain direction.
+- [`hafas-estimate-station-weight`](https://github.com/derhuerst/hafas-estimate-station-weight) – Pass in a HAFAS client, estimate the importance of a station.
+- [`are-vbb-hafas-stations-the-same`](https://github.com/derhuerst/are-vbb-hafas-stations-the-same) – Check if two stations from the VBB API should be one.
 - [`merge-vbb-stations`](https://github.com/derhuerst/merge-vbb-stations) – Heuristic to find VBB stations & stops that should be one.
