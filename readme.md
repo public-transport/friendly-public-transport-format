@@ -25,4 +25,4 @@ Things still missing:
 
 ## Contributing
 
-We are looking forward to discuss & extend this format further! If you have a question or want to propose changes, go to [the issues page](https://github.com/public-transport/friendly-public-transport-format/issues). Keep our [contributing guidelines in mind](contributing.md).
+We are looking forward to discuss & extend this format further! If you have a question or want to propose changes, go to [the issues page](https://github.com/public-transport/friendly-public-transport-format/issues). Keep our [contributing guidelines in mind](contributing.md). Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md).
