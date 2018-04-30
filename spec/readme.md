@@ -40,7 +40,7 @@ A `location` object is used by other items to indicate their locations.
 
 	longitude: 13.4, // optional
 	latitude: 52.5, // optional
-	altitude: 1300 // optional
+	altitude: 130.5 // optional, in meters
 }
 ```
 
