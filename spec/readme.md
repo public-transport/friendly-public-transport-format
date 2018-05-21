@@ -188,6 +188,43 @@ For a very consistent subway service, there may be one route for each direction.
 }
 ```
 
+### `stopover`
+
+A `stopover` represents a vehicle stopping at a stop/station at a specific time.
+
+```js
+{
+	type: 'stopover', // required
+	// - stop/station id or object
+	// - required
+	stop: '12345-678',
+	// - ISO 8601 string (with stop/station timezone)
+	// - required if `departure` is null
+	arrival: '2017-03-17T15:00:00+02:00',
+	// - seconds relative to scheduled arrival
+	// - optional
+	arrivalDelay: -45,
+	arrivalPlatform: '4-1', // string, optional
+	// - ISO 8601 string (with stop/station timezone)
+	// - required if `arrival` is null
+	departure: '2017-03-16T20:00:00+01:00',
+	// - seconds relative to scheduled departure
+	// - optional
+	departureDelay: 120,
+	departurePlatform: null, // string, optional
+	schedule: '1234', // schedule id or object
+	// - see section on modes
+	// - overrides `schedule`'s ` mode`
+	// - required
+	mode: 'train',
+	subMode: …, // reserved for future use
+	public: true, // is it publicly accessible?
+	// - operator id or object
+	// - overrides `schedule`'s `operator`
+	operator: 'sncf'
+}
+```
+
 ### `journey`
 
 A `journey` is a computed set of directions to get from A to B at a specific time. It would typically be the result of a route planning algorithm.
