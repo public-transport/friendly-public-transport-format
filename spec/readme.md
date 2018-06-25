@@ -219,21 +219,6 @@ A `stopover` represents a vehicle stopping at a stop/station at a specific time.
 	departureDelay: 120,
 
 	departurePlatform: null, // string, optional
-
-	schedule: '1234', // schedule id or object
-
-	// - see section on modes
-	// - overrides `schedule`'s ` mode`
-	// - required
-	mode: 'train',
-
-	subMode: …, // reserved for future use
-
-	public: true, // is it publicly accessible?
-
-	// - operator id or object
-	// - overrides `schedule`'s `operator`
-	operator: 'sncf'
 }
 ```
 
