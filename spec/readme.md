@@ -232,19 +232,47 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 	id: '12345', // unique, url-safe, required
 	legs: [ // array of objects, required
 		{
-			origin: '12345678', // station/stop/location id or object, required
-			destination: '87654321', // station/stop/location id or object, required
-			departure: '2017-03-16T20:00:00+01:00', // ISO 8601 string (with origin timezone), required
-			departureDelay: 120, // seconds relative to scheduled departure, optional
-			departurePlatform: '4-1', // string
-			arrival: '2017-03-17T15:00:00+02:00', // ISO 8601 string (with destination timezone), required
-			arrivalDelay: -45, // seconds relative to scheduled arrival, optional
-			arrivalPlatform: '9', // string
+			// - station/stop/location id or object
+			// - required
+			origin: '12345678',
+
+			// station/stop/location id or object
+			// - required
+			destination: '87654321',
+
+			// - ISO 8601 string (with origin timezone)
+			// - required
+			departure: '2017-03-16T20:00:00+01:00',
+
+			// - seconds relative to scheduled departure
+			// - optional
+			departureDelay: 120,
+
+			departurePlatform: '4-1', // string, optional
+
+			// - ISO 8601 string (with destination timezone)
+			// - required
+			arrival: '2017-03-17T15:00:00+02:00',
+
+			// - seconds relative to scheduled arrival
+			// - optional
+			arrivalDelay: -45,
+
+			arrivalPlatform: '9', // string, optional
+
 			schedule: '1234', // schedule id or object
-			mode: 'walking', // see section on modes, overrides `schedule` mode
+
+			// - see section on modes
+			// - overrides `schedule`'s `mode`
+			mode: 'walking',
+
 			subMode: …, // reserved for future use
-			public: true, // publicly accessible?
-			operator: 'sncf' // operator id or operator object, overrides `schedule` mode
+
+			public: true, // is it publicly accessible?
+
+			// - operator id or object
+			// - overrides `schedule`'s `operator`
+			operator: 'sncf'
 		}
 		// …
 	],
