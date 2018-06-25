@@ -28,7 +28,7 @@
 		"departureDelay": null,
 		"arrival": "2017-03-17T15:00:00+02:00",
 		"arrivalPlatform": "9",
-		"arrivalDelay": 30,
+		"arrivalDelay": 0,
 		"schedule": {
 			"type": "schedule",
 			"id": "1234",
@@ -80,6 +80,32 @@
 				1489777200
 			]
 		},
+		"stopovers": [{
+			"type": "stopover",
+			"stop": "10001",
+			"arrival": null,
+			"arrivalPlatform": null,
+			"departure": "2017-03-16T20:00:00+01:00",
+			"departurePlatform": "4-1",
+			"departureDelay": null
+		}, {
+			"type": "stopover",
+			"stop": "10002-a",
+			"arrival": "2017-03-16T21:01:30+01:00",
+			"arrivalPlatform": "C",
+			"arrivalDelay": 90,
+			"departure": "2017-03-16T21:03:00+01:00",
+			"departurePlatform": "C",
+			"departureDelay": 60,
+		}, {
+			"type": "stopover",
+			"stop": "10003",
+			"arrival": "2017-03-17T15:00:00+02:00",
+			"arrivalPlatform": "9",
+			"arrivalDelay": 0,
+			"departure": null,
+			"departurePlatform": null
+		}],
 		"public": true,
 		"operator": {
 			"type": "operator",

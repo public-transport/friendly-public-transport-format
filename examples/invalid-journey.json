@@ -84,6 +84,20 @@
 				1489777200
 			]
 		},
+		"stopovers": [{
+			"type": "stopover",
+			"stop": "10001",
+			"arrival": null,
+			"arrivalPlatform": null,
+			"departure": null,
+			"departurePlatform": 1,
+			"departureDelay": null
+		}, {
+			"type": "stopover",
+			"arrival": "2017-03-17T15:00:00+02:00",
+			"arrivalPlatform": "9",
+			"arrivalDelay": 0
+		}],
 		"public": true,
 		"operator": {
 			"type": "operator",
