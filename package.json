@@ -1,7 +1,7 @@
 {
 	"name": "friendly-public-transport-format",
 	"description": "A format for APIs, libraries and datasets containing and working with public transport data.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"keywords": [
 		"public transport",
 		"transit",

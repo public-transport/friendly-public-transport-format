@@ -96,7 +96,7 @@
 			"arrivalDelay": 90,
 			"departure": "2017-03-16T21:03:00+01:00",
 			"departurePlatform": "C",
-			"departureDelay": 60,
+			"departureDelay": 60
 		}, {
 			"type": "stopover",
 			"stop": "10003",
