@@ -260,6 +260,10 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 
 			arrivalPlatform: '9', // string, optional
 
+			// - array of stopover objects
+			// - optional
+			stopovers: […],
+
 			schedule: '1234', // schedule id or object
 
 			// - see section on modes
