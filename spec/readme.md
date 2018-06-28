@@ -264,7 +264,9 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 			// - optional
 			stopovers: […],
 
-			schedule: '1234', // schedule id or object
+			// - schedule id or object
+			// - optional
+			schedule: '1234',
 
 			// - see section on modes
 			// - overrides `schedule`'s `mode`
