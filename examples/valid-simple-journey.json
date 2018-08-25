@@ -12,7 +12,11 @@
 		"arrivalDelay": 30,
 		"schedule": "1234",
 		"public": true,
-		"operator": "2"
+		"operator": "2",
+		"price": {
+			"amount": 19.95,
+			"currency": "EUR"
+		}
 	}],
 	"price": {
 		"amount": 19.95,
