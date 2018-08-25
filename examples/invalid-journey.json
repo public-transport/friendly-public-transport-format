@@ -103,6 +103,10 @@
 			"type": "operator",
 			"id": "2",
 			"name": "2 Replacement Railway Services Inc."
+		},
+		"price": {
+			"amount": 0,
+			"currency": null
 		}
 	}],
 	"price": {

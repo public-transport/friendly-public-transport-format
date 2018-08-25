@@ -111,6 +111,10 @@
 			"type": "operator",
 			"id": "2",
 			"name": "2 Replacement Railway Services Inc."
+		},
+		"price": {
+			"amount": 19.95,
+			"currency": "EUR"
 		}
 	}],
 	"price": {
