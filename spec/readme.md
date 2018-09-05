@@ -270,7 +270,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 
 			// - see section on modes
 			// - overrides `schedule`'s `mode`
-			mode: 'walking',
+			mode: 'train',
 
 			subMode: …, // reserved for future use
 
