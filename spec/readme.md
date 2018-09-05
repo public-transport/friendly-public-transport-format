@@ -2,7 +2,7 @@
 
 ## references
 
-In order to be able to use this format in both static data *and* API responses, you may chose wether to reference an item by its `id` or inline the item as an object. Take this stop as an example:
+In order to be able to use this format in both static data *and* API responses, you may choose whether to reference an item by its `id` or inline the item as an object. Take this stop as an example:
 
 ```js
 {
