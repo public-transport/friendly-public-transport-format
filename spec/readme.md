@@ -278,6 +278,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 
 			// - operator id or object
 			// - overrides `schedule`'s `operator`
+			// - optional
 			operator: 'sncf'
 
 			// use this if pricing information is available for specific legs
