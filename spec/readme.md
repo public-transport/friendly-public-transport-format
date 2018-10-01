@@ -55,7 +55,7 @@ A station is a larger building or area that can be identified by a name. It is u
 ```js
 {
 	type: 'station', // required
-	id: '123456', // unique, url-safe, required
+	id: '123456', // unique, required
 	name: 'Berlin Hauptbahnhof', // official non-abbreviated name, required
 	// todo: other names
 	location: { // location object, optional
@@ -76,7 +76,7 @@ If the underlying data source does not allow such a fine-grained distinction, us
 ```js
 {
 	type: 'stop', // required
-	id: '12345678', // unique, url-safe, required
+	id: '12345678', // unique, required
 	station: '123456', // station id or station object, required
 	name: 'Berlin Hauptbahnhof (tief)', // official non-abbreviated name, required
 	// todo: other names
@@ -97,7 +97,7 @@ A `station` can be part of multiple `region`s.
 ```js
 {
 	type: 'region', // required
-	id: '1234', // unique, url-safe, required
+	id: '1234', // unique, required
 	name: 'Bretagne', // official non-abbreviated name, required
 	// todo: other names
 	stations: [ // station ids or station objects, required
@@ -111,7 +111,7 @@ A `station` can be part of multiple `region`s.
 ```js
 {
 	type: 'line', // required
-	id: '123', // unique, url-safe, required
+	id: '123', // unique, required
 	name: 'ICE 599', // official non-abbreviated name, required
 	mode: 'train', // see section on modes, required
 	subMode: …, // reserved for future use
@@ -130,7 +130,7 @@ For a very consistent subway service, there may be one route for each direction.
 ```js
 {
 	type: 'route', // required
-	id: '1234', // unique, url-safe, required
+	id: '1234', // unique, required
 	line: '123', // line id or line object, required,
 	mode: 'bus', // see section on modes, overrides `line` mode, e.g. for replacements services
 	subMode: …, // reserved for future use
@@ -148,7 +148,7 @@ For a very consistent subway service, there may be one route for each direction.
 ```js
 {
 	type: 'schedule', // required
-	id: '12345', // unique, url-safe, required
+	id: '12345', // unique, required
 	route: '1234', // route id or object, required
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
 	subMode: …, // reserved for future use
@@ -183,7 +183,7 @@ For a very consistent subway service, there may be one route for each direction.
 ```js
 {
 	type: 'operator', // required
-	id: 'sncf', // unique, url-safe, required
+	id: 'sncf', // unique, required
 	name: 'Société nationale des chemins de fer français' // official non-abbreviated name, required
 }
 ```
@@ -229,7 +229,7 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 ```js
 {
 	type: 'journey', // required
-	id: '12345', // unique, url-safe, required
+	id: '12345', // unique, required
 	legs: [ // array of objects, required
 		{
 			// - station/stop/location id or object
