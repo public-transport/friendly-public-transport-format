@@ -57,7 +57,6 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`discover-vbb-stations`](https://github.com/derhuerst/discover-vbb-stations) – Build a graph of VBB stations by querying departures.
 - [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations) – Build a graph of DB stations by querying departures.
 - [`hafas-collect-departures-at`](https://github.com/derhuerst/hafas-collect-departures-at) – Utility to collect departures, using any HAFAS client.
-- [`hafas-departures-in-direction`](https://github.com/derhuerst/hafas-departures-in-direction) – Pass in a HAFAS client, get departures in a certain direction.
 - [`hafas-estimate-station-weight`](https://github.com/derhuerst/hafas-estimate-station-weight) – Pass in a HAFAS client, estimate the importance of a station.
 - [`are-vbb-hafas-stations-the-same`](https://github.com/derhuerst/are-vbb-hafas-stations-the-same) – Check if two stations from the VBB API should be one.
 - [`merge-vbb-stations`](https://github.com/derhuerst/merge-vbb-stations) – Heuristic to find VBB stations & stops that should be one.
