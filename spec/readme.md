@@ -141,15 +141,32 @@ For a very consistent subway service, there may be one route for each direction.
 }
 ```
 
+### `trip`
+
+A `trip` represents a single run of a vehicle at a specific time. Passengers taking a trip usually don't enter the vehicle before the trip's first arrival or after its last departure.
+
+```js
+{
+	type: 'trip', // required
+	id: '1234', // unique, required
+	line: '1234', // line id or object, optional
+	route: '1234', // route id or object, optional
+	mode: 'bus', // required if route is an id or if the trip mode differs from the route mode
+	subMode: '…', // reserved for future use
+	stopovers: [] // list of stopover objects, required, must contain at least two entries
+}
+```
+
 ### `schedule`
 
-*Note:* There are many ways to format schedules of public transport routes. This one tries to balance the amount of data and consumability. It is specifically geared towards urban public transport, with frequent trains and homogenous travels.
+*Note:* While FPTF already offers `trip` to describe public transport timetables, a large list of `trip`s tends to contain a lot of duplicate information, especially in urban public transport, with frequent trains and homogenous travels. In those cases, schedules come in handy, describing a set of trips. However, unlike `trip`, they don't allow storing real time data.
 
 ```js
 {
 	type: 'schedule', // required
 	id: '12345', // unique, required
 	route: '1234', // route id or object, required
+	line: '1234', // line id or object, optional
 	mode: 'bus', // see section on modes, overrides `route`/`line` mode, e.g. for replacements services
 	subMode: …, // reserved for future use
 	sequence: [
@@ -169,12 +186,12 @@ For a very consistent subway service, there may be one route for each direction.
 			departure: 150 // optional, when the vehicle leaves the route
 		}
 	],
-	starts: [ // array of Unix timestamps, required
-		1488379661, // start time of the trip
-		1488379761,
-		1488379861,
-		1488379961
-	]
+	starts: { // object trip.id -> ISO 8601 string (with timezone), required
+		'trip1234': '2019-03-29T20:00:00+01:00', // start time of the trip
+		'trip2345': '2019-03-30T20:00:00+01:00',
+		'trip3456': '2019-03-31T20:00:00+02:00',
+		'trip4567': '2019-04-01T20:00:00+02:00',
+	}
 }
 ```
 
