@@ -246,69 +246,80 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 ```js
 {
 	type: 'journey', // required
-	id: '12345', // unique, required
-	legs: [ // array of objects, required
-		{
-			// - station/stop/location id or object
-			// - required
-			origin: '12345678',
-
-			// station/stop/location id or object
-			// - required
-			destination: '87654321',
-
-			// - ISO 8601 string (with origin timezone)
-			// - required
-			departure: '2017-03-16T20:00:00+01:00',
-
-			// - seconds relative to scheduled departure
-			// - optional
-			departureDelay: 120,
-
-			departurePlatform: '4-1', // string, optional
-
-			// - ISO 8601 string (with destination timezone)
-			// - required
-			arrival: '2017-03-17T15:00:00+02:00',
-
-			// - seconds relative to scheduled arrival
-			// - optional
-			arrivalDelay: -45,
-
-			arrivalPlatform: '9', // string, optional
-
-			// - array of stopover objects
-			// - optional
-			stopovers: […],
-
-			// - schedule id or object
-			// - optional
-			schedule: '1234',
-
-			// - see section on modes
-			// - overrides `schedule`'s `mode`
-			mode: 'train',
-
-			subMode: …, // reserved for future use
-
-			public: true, // is it publicly accessible?
-
-			// - operator id or object
-			// - overrides `schedule`'s `operator`
-			operator: 'sncf'
-
-			// use this if pricing information is available for specific legs
-			price: { // optional
-				amount: 12.50, // number, required
-				currency: 'EUR' // ISO 4217 code, required
-			}
-		}
-		// …
-	],
+	id: '12345', // unique, optional
+	legs: [], // array of leg objects, required, must contain at least one entry
 	price: { // optional
 		amount: 19.95, // number, required
 		currency: 'EUR' // ISO 4217 code, required
 	}
+}
+```
+
+The `departureDelay` and `arrivalDelay` fields should only contain a value if realtime data or a prognosis based on realtime data is actually available.
+
+### `leg`
+
+A `leg` is a section of a `journey`. Legs that don't involve on-demand transport (e.g. bike-sharing or walking) usually correspond to a specific part of a `trip` taken by the user.
+
+```js
+{
+	type: 'leg', // required
+	id: '12345', // unique, optional
+
+	// - station/stop/location id or object
+	// - required
+	origin: '12345678',
+
+	// station/stop/location id or object
+	// - required
+	destination: '87654321',
+
+	// - ISO 8601 string (with origin timezone)
+	// - required
+	departure: '2017-03-16T20:00:00+01:00',
+
+	// - seconds relative to scheduled departure
+	// - optional
+	departureDelay: 120,
+
+	departurePlatform: '4-1', // string, optional
+
+	// - ISO 8601 string (with destination timezone)
+	// - required
+	arrival: '2017-03-17T15:00:00+02:00',
+
+	// - seconds relative to scheduled arrival
+	// - optional
+	arrivalDelay: -45,
+
+	arrivalPlatform: '9', // string, optional
+
+	// - array of stopover objects
+	// - optional
+	stopovers: […],
+
+	// - schedule id or object
+	// - optional
+	schedule: '1234',
+
+	// - see section on modes
+	// - overrides `schedule`'s `mode`
+	mode: 'train',
+
+	subMode: …, // reserved for future use
+
+	public: true, // is it publicly accessible?
+
+	// - operator id or object
+	// - overrides `schedule`'s `operator`
+	operator: 'sncf'
+
+	// use this if pricing information is available for specific legs
+	price: { // optional
+		amount: 12.50, // number, required
+		currency: 'EUR' // ISO 4217 code, required
+	}
+}
 }
 ```
 
