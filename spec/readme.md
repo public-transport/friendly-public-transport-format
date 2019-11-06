@@ -320,7 +320,6 @@ A `leg` is a section of a `journey`. Legs that don't involve on-demand transport
 		currency: 'EUR' // ISO 4217 code, required
 	}
 }
-}
 ```
 
 The `departureDelay` and `arrivalDelay` fields should only contain a value if realtime data or a prognosis based on realtime data is actually available.
