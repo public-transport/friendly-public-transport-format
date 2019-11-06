@@ -218,22 +218,36 @@ A `stopover` represents a vehicle stopping at a stop/station at a specific time.
 	stop: '12345-678',
 
 	// - ISO 8601 string (with stop/station timezone)
-	// - required if `departure` is null
+	// - required if `departure` is `null`
+	// - realtime/prognosis data if available, otherwise plan data, otherwise `null`
 	arrival: '2017-03-17T15:00:00+02:00',
 
-	// - seconds relative to scheduled arrival
-	// - optional
+	// - ISO 8601 string (with stop/station timezone)
+	// - plan data if available, otherwise `null`
+	plannedArrival: '2017-03-17T15:45:00+02:00',
+
+	// - if realtime/prognosis & plan data is available
+	//   - required
+	//   - value must be `arrival - plannedArrival` in seconds
+	// - otherwise optional
 	arrivalDelay: -45,
 
 	arrivalPlatform: '4-1', // string, optional
 
 	// - ISO 8601 string (with stop/station timezone)
-	// - required if `arrival` is null
-	departure: '2017-03-16T20:00:00+01:00',
+	// - required if `arrival` is `null`
+	// - realtime/prognosis data if available, otherwise plan data, otherwise `null`
+	departure: '2017-03-17T15:02:00+02:00',
 
-	// - seconds relative to scheduled departure
-	// - optional
-	departureDelay: 120,
+	// - ISO 8601 string (with stop/station timezone)
+	// - plan data if available, otherwise `null`
+	plannedDeparture: '2017-03-17T15:02:00+02:00',
+
+	// - if realtime/prognosis & plan data is available
+	//   - required
+	//   - value must be `arrival - plannedArrival` in seconds
+	// - otherwise optional
+	departureDelay: null,
 
 	departurePlatform: null, // string, optional
 }
@@ -255,8 +269,6 @@ A `journey` is a computed set of directions to get from A to B at a specific tim
 }
 ```
 
-The `departureDelay` and `arrivalDelay` fields should only contain a value if realtime data or a prognosis based on realtime data is actually available.
-
 ### `leg`
 
 A `leg` is a section of a `journey`. Legs that don't involve on-demand transport (e.g. bike-sharing or walking) usually correspond to a specific part of a `trip` taken by the user.
@@ -274,25 +286,39 @@ A `leg` is a section of a `journey`. Legs that don't involve on-demand transport
 	// - required
 	destination: '87654321',
 
-	// - ISO 8601 string (with origin timezone)
-	// - required
-	departure: '2017-03-16T20:00:00+01:00',
+	// - ISO 8601 string (with stop/station timezone)
+	// - required if `arrival` is `null`
+	// - realtime/prognosis data if available, otherwise plan data, otherwise `null`
+	departure: '2017-03-17T15:02:00+02:00',
 
-	// - seconds relative to scheduled departure
-	// - optional
-	departureDelay: 120,
+	// - ISO 8601 string (with stop/station timezone)
+	// - plan data if available, otherwise `null`
+	plannedDeparture: '2017-03-17T15:02:00+02:00',
 
-	departurePlatform: '4-1', // string, optional
+	// - if realtime/prognosis & plan data is available
+	//   - required
+	//   - value must be `arrival - plannedArrival` in seconds
+	// - otherwise optional
+	departureDelay: null,
 
-	// - ISO 8601 string (with destination timezone)
-	// - required
+	departurePlatform: null, // string, optional
+
+	// - ISO 8601 string (with stop/station timezone)
+	// - required if `departure` is `null`
+	// - realtime/prognosis data if available, otherwise plan data, otherwise `null`
 	arrival: '2017-03-17T15:00:00+02:00',
 
-	// - seconds relative to scheduled arrival
-	// - optional
+	// - ISO 8601 string (with stop/station timezone)
+	// - plan data if available, otherwise `null`
+	plannedArrival: '2017-03-17T15:45:00+02:00',
+
+	// - if realtime/prognosis & plan data is available
+	//   - required
+	//   - value must be `arrival - plannedArrival` in seconds
+	// - otherwise optional
 	arrivalDelay: -45,
 
-	arrivalPlatform: '9', // string, optional
+	arrivalPlatform: '4-1', // string, optional
 
 	// - array of stopover objects
 	// - optional
@@ -321,8 +347,6 @@ A `leg` is a section of a `journey`. Legs that don't involve on-demand transport
 	}
 }
 ```
-
-The `departureDelay` and `arrivalDelay` fields should only contain a value if realtime data or a prognosis based on realtime data is actually available.
 
 ## modes
 
