@@ -22,6 +22,8 @@ Things still missing:
 - concise definitions
 - clear naming & recommendations for optional data
 
+There's also a work-in-progress spec for APIs building on top of the FPTF format: the [*Friendly Public Transport Interface* for JavaScript (FPTI-JS)](https://github.com/public-transport/fpti-js).
+
 
 ## Contributing
 
