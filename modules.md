@@ -47,6 +47,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`hafas-monitor-departures`](https://github.com/derhuerst/hafas-monitor-departures) – Fetch all departures of all lines at all stations of VBB.
 - [`hafas-monitor-departures-ws-server`](https://github.com/derhuerst/hafas-monitor-departures-ws-server) – A WebSocket server wrapping `hafas-monitor-departures`.
 - [`hafas-monitor-journeys`](https://github.com/derhuerst/hafas-monitor-journeys) – Use any HAFAS API to monitor journeys from A to B.
+- [`pyhafas`](https://github.com/FahrplanDatenGarten/pyhafas/) - python client for the HAFAS API
 
 ## consuming FPTF data
 
