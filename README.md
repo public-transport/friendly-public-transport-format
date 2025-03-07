@@ -8,7 +8,7 @@ This repo outlines **a format for APIs, libraries and datasets containing and wo
 
 It tries to keep things simple:
 
-- JSON and [ndjson]([http://ndjson.org](https://github.com/ndjson/ndjson-spec)) only
+- JSON and [ndjson](https://github.com/ndjson/ndjson-spec) only
 - a flat, intuitive representation of public transport timetables & infrastructure
 - conceptually inspired by the de-facto standard [GTFS](https://developers.google.com/transit/gtfs/)
 
