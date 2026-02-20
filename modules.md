@@ -48,6 +48,7 @@ This is a list of JavaScript modules adhering to the [*Friendly Public Transport
 - [`hafas-monitor-departures-ws-server`](https://github.com/derhuerst/hafas-monitor-departures-ws-server) – A WebSocket server wrapping `hafas-monitor-departures`.
 - [`hafas-monitor-journeys`](https://github.com/derhuerst/hafas-monitor-journeys) – Use any HAFAS API to monitor journeys from A to B.
 - [`pyhafas`](https://github.com/FahrplanDatenGarten/pyhafas/) - python client for the HAFAS API
+- [`motis-fptf-client`](https://github.com/motis-project/motis-fptf-client) - JavaScript client to expose the MOTIS API as a fptf API
 
 ## consuming FPTF data
 
